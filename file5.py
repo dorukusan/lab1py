@@ -57,7 +57,12 @@ def fib(n):
 
 def circumstances(l):
     lst = []
-    for i in range(1, round(l/2)+1):
+    n = 0
+    if l % 2 == 1:
+        n = l//2+2
+    else:
+        n = l//2+1
+    for i in range(1, n):
         lst.append(prime(i))
         lst.append(fib(i))
     if l % 2 == 1:
